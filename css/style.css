@@ -1,16 +1,29 @@
+:root{
+    --leftmargin: 40px;
+}
+
 *{
     margin: 0;
     padding: 0;
+    font-family: sans-serif, Verdana;
+    font-size: 20px;
 }
 
 body{
-
+    background-color: rgb(244, 244, 244);
 }
+
+@font-face{
+    font-family: "Norse";
+    src: url("../fonts/Norse-Bold.otf");
+}
+
 
 section{
     display: flex;
     flex-direction: row;
     height: 720px;
+    overflow:hidden;
 }
 
 main-section > div{
@@ -18,31 +31,39 @@ main-section > div{
 }
 
 .container-1{
-    flex: 1;
+    flex: 2;
     position: relative;
 }
 
 .container-2{
-    flex: 2;
+    flex: 3;
 }
 
 .container-1 img{
-    height: 100%;
+    width: 100%;
     display: block;
 }
 
 .odin-logo{
     background-color: rgba(0, 0, 0, 0.479);
     color: white;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;;
     position: absolute;
     width: 100%;
-    top: 50%;
+    top: 25%;
 }
 
 .odin-logo > h1{
     font-family: "Norse";
-    font-size: 72px;
+    display: inline-flex;
+    font-size: 96px;
+}
+
+.odin-logo img{
+    width: 96px;
+    padding: 12px 0 12px 0;
 }
 
 .odin-logo > h1::before{
@@ -51,7 +72,91 @@ main-section > div{
     background-image: url("../images/odin-lined.png");
 }
 
-@font-face{
-    font-family: "Norse";
-    src: url("../fonts/Norse-Bold.otf");
+.container-2{
+    align-content: center;
 }
+
+.bold{
+    font-weight: 800;
+}
+
+.content, .legend{
+    margin-left: var(--leftmargin);
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 60px;;
+}
+
+fieldset{
+    appearance: none;
+    border: none;
+    background-color: white;
+    box-shadow: 0 3px 2px 0px rgba(0, 0, 0, 0.2);
+}
+
+.input-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    gap: 56px;
+    margin-left: var(--leftmargin);
+}
+
+.input-container{
+    margin: 20px 0 40px 0;
+}
+
+label{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+input{
+    border: 2px solid #E5E7EB;
+    border-radius: 6px;
+    font-size: 16;
+    font-weight: 100;
+    transition: all 0.3s ease;
+}
+
+input:focus{
+    border: 2px solid #1352cf;
+    outline: none;
+}
+
+input:user-invalid{
+    border: 2px solid #cf1313;
+}
+
+.legend{
+    margin-top: 24px;
+}
+
+.confirm{
+    margin-left: var(--leftmargin);
+}
+
+button{
+    background-color: #596D48;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    border: none;
+    border-radius: 0.5em;
+    padding: 8px 34px 8px 34px;
+    margin: 36px 0 36px 0;
+    box-shadow: 2px 2px 6px 4px rgba(0, 0, 0, 0.2);
+}
+
+a{
+    font-size: 16px;
+}
+
