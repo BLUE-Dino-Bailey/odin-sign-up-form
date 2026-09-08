@@ -24,6 +24,7 @@ section{
     flex-direction: row;
     height: 720px;
     overflow:hidden;
+    font-weight: 100;
 }
 
 main-section > div{
@@ -122,8 +123,9 @@ label{
 input{
     border: 2px solid #E5E7EB;
     border-radius: 6px;
-    font-size: 16;
+    font-size: 16px;
     font-weight: 100;
+    padding: 4px 12px;
     transition: all 0.3s ease;
 }
 
